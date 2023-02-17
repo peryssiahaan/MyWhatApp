@@ -20,6 +20,15 @@ function errorHandler(err, req, res, next) {
       code = 400;
       message = err.errors[0].message;
       break;
+    case "invalid_token":
+    case "JsonWebTokenError":
+      code = 403;
+      message = "Invalid Token";
+      break;
+    case "not_found":
+      code = 404;
+      message = "Data not found";
+      break;
     default:
       code = 500;
       message = "Internal server error";

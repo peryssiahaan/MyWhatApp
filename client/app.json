@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MyWhatApp",
-    "slug": "MyWhatApp",
+    "slug": "mywhatapp",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -30,7 +30,7 @@
     },
     "extra": {
       "eas": {
-        "projectId": "ff037c85-8c93-4fad-b5ca-adc36d4d2852"
+        "projectId": "7e3014c6-52d3-4b20-b01f-c3f476de1a56"
       }
     }
   }

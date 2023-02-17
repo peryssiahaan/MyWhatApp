@@ -15,7 +15,7 @@ export default function StackScreenManager() {
   return (
     <LoginStatus.Provider value={{ setIsLogin }}>
       <Stack.Navigator>
-        {true ? (
+        {isLogin ? (
           <>
             <Stack.Screen
               name="ChatTab"

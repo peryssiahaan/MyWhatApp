@@ -1,31 +1,39 @@
-import { StyleSheet } from "react-native";
+import { Pressable, StyleSheet, Text, View, Dimensions } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
 import ChatList from "../components/ChatList";
+import Ionicons from "@expo/vector-icons/Ionicons";
+
+const screenWidth = Dimensions.get("screen").width;
 
 export default function Main() {
   return (
-    <SafeAreaView style={styles.container}>
+    <View style={styles.container}>
       <ChatList />
-    </SafeAreaView>
+      <Pressable style={styles.btn} android_ripple={{ color: "#DFF" }}>
+        <Ionicons name="chatbox-outline" size={20} />
+        <Text style={{ letterSpacing: 2, fontSize: 15, fontWeight: "bold" }}>
+          New Conversation
+        </Text>
+      </Pressable>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
     alignItems: "center",
   },
   btn: {
-    width: 100,
+    flexDirection: "row",
+    width: screenWidth,
+    minWidth: 100,
     height: 50,
-    backgroundColor: "#CCC",
-    borderWidth: 4,
+    backgroundColor: "#FFF",
+    borderWidth: 2,
     borderColor: "#DDD",
-    borderRadius: 10,
     justifyContent: "center",
     alignItems: "center",
-    marginHorizontal: 10,
   },
 });
